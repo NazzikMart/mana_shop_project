@@ -1,0 +1,38 @@
+{"service" :[
+  {
+    "id": 1,
+    "iconClass": "fa-solid fa-truck",
+    "name": "Доставка",
+    "description": "Перевірка при отриманні та можливість безкоштовно повернути товар"
+  },
+  {
+    "id": 2,
+    "iconClass": "fa-brands fa-sellsy",
+    "name": "Б/У техніка",
+    "description": "У нас також в наявності є вживана техніка за солодкими цінами"
+  },
+  {
+    "id": 3,
+    "iconClass": "fa-solid fa-laptop-file",
+    "name": "Ремонт",
+    "description": "Відремонтуємо будь-яку річ швидко та якісно"
+  },
+  {
+    "id": 4,
+    "iconClass": "fa-solid fa-shop",
+    "name": "Магазини",
+    "description": "Легко відкрийте свій інтернет-магазин"
+  },
+  {
+    "id": 5,
+    "iconClass": "fa-solid fa-circle-info",
+    "name": "Допоможи іншим",
+    "description": "Передайте ваші речі дитячим будинкам та благодійним організаціям"
+  },
+  {
+    "id": 6,
+    "iconClass": "fa-solid fa-credit-card",
+    "name": "Товар в кредит",
+    "description": "Можна купити будь який наш товар в кредит або митєву розтрочку"
+  }
+]}

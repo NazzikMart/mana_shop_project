@@ -1,0 +1,86 @@
+{"product" :[
+  {
+    "id": 15,
+    "name": "Чайник",
+    "price": "1100.00",
+    "model": "SilverCrest",
+    "category": "Kettle",
+    "counter": 1,
+    "producer": "Poco",
+    "heading": "phone",
+    "img": "https://i.allo.ua/media/catalog/product/cache/3/image/710x600/602f0fa2c1f0d1ba5e241f914e856ff9/import/3791650014461147.jpg",
+    "description": "Елегантний чайник SilverCrest від виробника Poco. Має велику потужність і стильний дизайн."
+  },
+  {
+    "id": 16,
+    "name": "Телефон",
+    "price": "5600.00",
+    "model": "SilverCrest",
+    "category": "telephone",
+    "counter": 1,
+    "producer": "Poco",
+    "heading": "phone",
+    "img": "https://i.allo.ua/media/catalog/product/cache/3/image/710x600/602f0fa2c1f0d1ba5e241f914e856ff9/1/2/123_11_36.jpg",
+    "description": "Остання модель телефону SilverCrest від виробника Poco. Оснащений найновішими функціями та камерами високої роздільної здатності."
+  },
+  {
+    "id": 17,
+    "name": "Гриль",
+    "price": "1100.00",
+    "model": "SilverCrest",
+    "category": "Grill",
+    "counter": 1,
+    "producer": "Poco",
+    "heading": "phone",
+    "img": "https://i.allo.ua/media/catalog/product/cache/3/image/710x600/602f0fa2c1f0d1ba5e241f914e856ff9/g/c/gc772d30-1.jpg",
+    "description": "Практичний гриль SilverCrest для вашого дому від виробника Poco. Ідеально підходить для приготування смачних страв на відкритому повітрі або в приміщенні."
+  },
+  {
+    "id": 18,
+    "name": "Мікрохвильовка",
+    "price": "1100.00",
+    "model": "SilverCrest",
+    "category": "Microwave",
+    "counter": 1,
+    "producer": "Poco",
+    "heading": "phone",
+    "img": "https://i.allo.ua/media/catalog/product/cache/3/image/710x600/602f0fa2c1f0d1ba5e241f914e856ff9/1/5/1574995.jpg",
+    "description": "Потужна мікрохвильовка SilverCrest від виробника Poco. Швидко нагріває їжу та має зручне керування."
+  },
+  {
+    "id": 19,
+    "name": "Пилосос",
+    "price": "1100.00",
+    "model": "SilverCrest",
+    "category": "VacuumCleaner",
+    "counter": 1,
+    "producer": "Poco",
+    "heading": "phone",
+    "img": "https://i.allo.ua/media/catalog/product/cache/3/image/710x600/602f0fa2c1f0d1ba5e241f914e856ff9/3/2/3214_2211400052.1200x1200.jpg",
+    "description": "Потужний пилосос SilverCrest від виробника Poco. Ідеально підходить для прибирання будинку та офісу."
+  },
+  {
+    "id": 25,
+    "name": "Чайник",
+    "price": "1100.00",
+    "model": "SilverCrest",
+    "category": "Kettle",
+    "counter": 1,
+    "producer": "Poco",
+    "heading": "phone",
+    "img": "https://i.allo.ua/media/catalog/product/cache/3/image/710x600/602f0fa2c1f0d1ba5e241f914e856ff9/import/3791650014461147.jpg",
+    "description": "Елегантний чайник SilverCrest від виробника Poco. Має велику потужність і стильний дизайн."
+  },
+  {
+    "id": 26,
+    "name": "Телефон",
+    "price": "5600.00",
+    "model": "SilverCrest",
+    "category": "telephone",
+    "counter": 1,
+    "producer": "Poco",
+    "heading": "phone",
+    "img": "https://i.allo.ua/media/catalog/product/cache/3/image/710x600/602f0fa2c1f0d1ba5e241f914e856ff9/1/2/123_11_36.jpg",
+    "description": "Остання модель телефону SilverCrest від виробника Poco. Оснащений найновішими функціями та камерами високої роздільної здатності."
+  }
+]}

@@ -1,0 +1,37 @@
+{"categorie" :[
+  {
+    "id": 1,
+    "key": "all",
+    "name": "Всі"
+  },
+  {
+    "id": 2,
+    "key": "Kettle",
+    "name": "Чайники"
+  },
+  {
+    "id": 3,
+    "key": "telephone",
+    "name": "Телефони"
+  },
+  {
+    "id": 4,
+    "key": "Grill",
+    "name": "Грилі"
+  },
+  {
+    "id": 5,
+    "key": "Microwave",
+    "name": "Мікрохвильовки"
+  },
+  {
+    "id": 6,
+    "key": "VacuumCleaner",
+    "name": "Пилососи"
+  },
+  {
+    "id": 7,
+    "key": "ThermalMug",
+    "name": "Термокружки"
+  }
+]}

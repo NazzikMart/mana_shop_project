@@ -1,0 +1,144 @@
+.purchase-wrapper {
+  display: flex;
+  flex-direction: row;
+
+  margin-top: 20px;
+  justify-content: center;
+  gap: 50px;
+}
+
+.contacts-datails-items {
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.contacts-date-items,
+.delivery-date-items,
+.payment-date-items {
+  margin-bottom: 20px;
+}
+
+.contacts-date-item-name,
+.delivery-date-item-name,
+.payment-date-item-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contacts-date-item-form,
+.delivery-date-item-form,
+.payment-date-item-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-date-item-form input,
+.delivery-date-item-form select,
+.payment-date-item-form input[type="radio"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+}
+
+.delivery-date-item-form select {
+  padding: 10px;
+}
+
+.totalSum {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.purchase-product-details-item-btn {
+  text-align: center;
+}
+
+.purchase-product-details-item-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.purchase-product-details-item-button:hover {
+  background-color: #0056b3;
+}
+
+.purchase-product-details-items {
+  width: 100%;
+  max-width: 600px;
+}
+
+.besket-products {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.order-product {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-product-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.order-product-info {
+  flex-grow: 1;
+}
+
+.order-product-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.order-product-price {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.order-product-count {
+  display: flex;
+  align-items: center;
+}
+
+.order-product-counter {
+  margin-left: auto;
+}
+
+.order-product-counter-plus,
+.order-product-counter-minus {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.order-product-delete {
+  cursor: pointer;
+  color: #e74c3c;
+}

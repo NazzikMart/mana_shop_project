@@ -1,0 +1,40 @@
+.FilterProduct {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+    padding-top: 0px;
+}
+
+.category-item {
+    cursor: pointer;
+    background: #550486;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: all .5s ease;
+    color: white;
+    font-weight: 500;
+    transition: all .4s ease;
+    margin-right: 20px;
+}
+
+.category-item:hover {
+    background-color: rgb(122, 122, 122);
+}
+
+@media (max-width: 1400px) {
+
+    .FilterProduct {
+        flex-direction: column;
+        padding: 30px;
+
+    }
+
+    .category-item {
+        margin-bottom: 10px;
+    }
+
+
+}

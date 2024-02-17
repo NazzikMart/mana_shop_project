@@ -1,0 +1,232 @@
+import { useContext } from "react";
+import axios from "axios";
+import { AppContext } from "../Components/Functional/App/App";
+
+ const useAppFunctions = () => {
+  const {
+    product,
+    setProduct,
+    orders,
+    setOrders,
+    totalCost,
+    setTotalCost,
+    infoProducts,
+    setInfoProducts,
+    producers,
+    categories,
+    currentItems,
+    setCurrentItems,
+    maxPrice,
+    setMaxPrice,
+    minPrice,
+    setMinPrice,
+    searchTerm,
+    setSearchTerm,
+    searchResults,
+    setSearchResults,
+    selectedProducers,
+    setSelectedProducers,
+    renderCart,
+    setRenderCart,
+    services,
+    setServices,
+    userData,
+    setUserData,
+    isAccount,
+    setIsAcount,
+  } = useContext(AppContext);
+
+  const handleRegistration = async (data) => {
+    try {
+      const response = await axios.post("http://localhost:3001/register", data);
+      console.log(response.data);
+      setUserData({
+        firstName: data.firstName,
+        number: data.number,
+        password: data.password,
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const handleLogin = async (data) => {
+    try {
+      const response = await axios.post("http://localhost:3001/login", data);
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const toggleAccount = () => {
+    setIsAcount(!isAccount);
+  };
+
+  const addToOrder = (item) => {
+    const isItemInOrder = orders.some((orderItem) => orderItem.id === item.id);
+
+    if (!isItemInOrder) {
+      setOrders([...orders, item]);
+      calculateTotalCost();
+    } else {
+      console.log("Цей товар вже є в кошику");
+    }
+  };
+
+  const updateOrders = (updatedOrders, totalCost) => {
+    setOrders(updatedOrders);
+    setTotalCost(totalCost);
+  };
+
+  const infoProduct = (item) => {
+    setInfoProducts([item]);
+  };
+
+  const removeProduct = (productId) => {
+    setOrders((prevOrders) =>
+      prevOrders.filter((order) => order.id !== productId)
+    );
+    calculateTotalCost();
+  };
+
+  const calculateTotalCost = () => {
+    const total = orders.reduce((accumulator, order) => {
+      return accumulator + order.price * order.counter;
+    }, 0);
+
+    setTotalCost(total);
+  };
+
+  const choseCategory = (category, heading) => {
+    if (category === "all") {
+      setCurrentItems(product);
+    } else {
+      setCurrentItems(
+        product.filter(
+          (el) => el.category === category || el.heading === heading
+        )
+      );
+    }
+  };
+
+  const choseCategoryNew = (category) => {
+    if (category === "all") {
+      setCurrentItems(product);
+      return;
+    }
+
+    setCurrentItems(product.filter((el) => el.category === category));
+  };
+
+  const handleSearch = (event) => {
+    const term = event.target.value;
+    setSearchTerm(term);
+
+    const results = product.filter((product) =>
+      product.name.toLowerCase().includes(term.toLowerCase())
+    );
+
+    setSearchResults(results);
+  };
+
+  const filterByPrice = () => {
+    if (minPrice !== "" && maxPrice !== "") {
+      const filteredProduct = currentItems.filter((el) => {
+        return el.price >= Number(minPrice) && el.price <= Number(maxPrice);
+      });
+      setCurrentItems(filteredProduct);
+    }
+  };
+
+  const filterByProducer = () => {
+    if (selectedProducers.length > 0) {
+      const filteredProducts = product.filter((el) =>
+        selectedProducers.includes(el.producer)
+      );
+      setCurrentItems(filteredProducts);
+    } else {
+      setCurrentItems(product);
+    }
+  };
+
+  const choseProducer = (producer) => {
+    if (selectedProducers.includes(producer)) {
+      setSelectedProducers(selectedProducers.filter((p) => p !== producer));
+    } else {
+      setSelectedProducers([...selectedProducers, producer]);
+    }
+  };
+
+  const showFunction = () => {
+    filterByProducer();
+    filterByPrice();
+  };
+
+  const incrementCounter = (productId, price) => {
+    const updatedOrders = orders.map((order) => {
+      if (order.id === productId) {
+        const newCounter = order.counter + 1;
+        if (newCounter >= 1) {
+          return { ...order, counter: newCounter };
+        }
+      }
+      return order;
+    });
+
+    const totalCost = updatedOrders.reduce((accumulator, order) => {
+      return accumulator + order.price * order.counter;
+    }, 0);
+
+    updateOrders(updatedOrders, totalCost);
+  };
+
+  const decrementCounter = (productId, price) => {
+    const updatedOrders = orders.map((order) => {
+      if (order.id === productId) {
+        const newCounter = order.counter - 1;
+        if (newCounter >= 1) {
+          return { ...order, counter: newCounter };
+        } else {
+          return null;
+        }
+      }
+      return order;
+    });
+
+    const filteredOrders = updatedOrders.filter((order) => order !== null);
+
+    const totalCost = filteredOrders.reduce((accumulator, order) => {
+      return accumulator + order.price * order.counter;
+    }, 0);
+
+    updateOrders(filteredOrders, totalCost);
+  };
+
+  const handleRemoveProduct = (productId) => {
+    removeProduct(productId);
+  };
+
+  return {
+    handleRegistration,
+    handleLogin,
+    toggleAccount,
+    addToOrder,
+    updateOrders,
+    infoProduct,
+    removeProduct,
+    choseCategory,
+    choseCategoryNew,
+    handleSearch,
+    filterByPrice,
+    filterByProducer,
+    choseProducer,
+    showFunction,
+    incrementCounter,
+    decrementCounter,
+    handleRemoveProduct,
+  };
+};
+
+
+export default useAppFunctions

@@ -3,7 +3,6 @@ import { AppContext } from "../App/App";
 import "./FilterProduct.css";
 
 const FilterProduct = () => {
-  // Витягуємо значення контексту за допомогою useContext
   const { categories, choseCategory } = useContext(AppContext);
 
   return (

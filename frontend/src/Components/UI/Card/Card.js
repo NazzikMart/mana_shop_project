@@ -1,12 +1,17 @@
 import React, { useContext } from "react";
 import "./Card.css";
 import { AppContext } from "../../Functional/App/App";
+import { Link } from "react-router-dom";
 
 const Card = () => {
   // Витягуємо значення контексту за допомогою useContext
-  const { searchTerm, searchResults, currentItems, addToOrder } =
-    useContext(AppContext);
-
+  const {
+    searchTerm,
+    searchResults,
+    currentItems,
+    addToOrder,
+    handleMoreInfoClick,
+  } = useContext(AppContext);
   return (
     <React.Fragment>
       <div className="product-catalog-items">
@@ -33,6 +38,14 @@ const Card = () => {
                       >
                         Додати до кошика
                       </button>
+
+                      <Link
+                        to="/productInfo"
+                        className="add-to-cart-btn"
+                        onClick={() => handleMoreInfoClick(item)}
+                      >
+                        Більше про товар
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -58,6 +71,14 @@ const Card = () => {
                       >
                         Додати до кошика
                       </button>
+
+                      <Link
+                        to="/productInfo"
+                        className="add-to-cart-btn"
+                        onClick={() => handleMoreInfoClick(item)}
+                      >
+                        Більше про товар
+                      </Link>
                     </div>
                   </div>
                 </div>

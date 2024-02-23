@@ -22,7 +22,7 @@ app.get("/exportData", (req, res) => {
 
     const jsonData = JSON.stringify(results, null, 2);
     fs.writeFile(
-      "../src/json/product.json",
+      "../frontend/src/json/product.json",
       '{"product" :' + jsonData + "}",
       (err) => {
         console.log(err);

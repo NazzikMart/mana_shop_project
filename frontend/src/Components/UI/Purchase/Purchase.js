@@ -5,8 +5,12 @@ import axios from "axios"; // Додали axios для відправки за�
 import { AppContext } from "../../Functional/App/App";
 
 const Purchase = () => {
-  const { orders, incrementCounter, decrementCounter, handleRemoveProduct } =
-    useContext(AppContext);
+  const {
+    orders,
+    incrementCounter,
+    decrementCounter,
+    handleRemoveProduct,
+  } = useContext(AppContext);
 
   const [totalSum, setTotalSum] = useState(0);
 
@@ -31,6 +35,8 @@ const Purchase = () => {
     setTotalSum(sum);
   };
 
+  const deliveryMethod = watch("deliveryMethod");
+
   const handleSubmitOrder = async (e) => {
    
     const formData = {
@@ -46,15 +52,11 @@ const Purchase = () => {
       .post("http://localhost:3001/api/orders", formData)
       .then((response) => {
         console.log(response.data);
-        // Додаткові дії після успішного замовлення
       })
       .catch((error) => {
         console.error("Помилка відправки замовлення:", error);
       });
   };
-
-  const deliveryMethod = watch("deliveryMethod");
-
 
   return (
     <div className="purchase-wrapper">
@@ -114,7 +116,7 @@ const Purchase = () => {
 
         <div className="delivery-date-items">
           <span className="delivery-date-item-name">Спосіб доставки</span>
-          <form className="delivery-date-item-form" onSubmit={handleSubmit(handleSubmitOrder)}>
+          <form className="delivery-date-item-form">
             <Controller
               name="deliveryMethod"
               control={control}
@@ -192,7 +194,7 @@ const Purchase = () => {
         </div>
         <div className="payment-date-items">
           <span className="payment-date-item-name">Оплата</span>
-          <form onSubmit={handleSubmit(handleSubmitOrder)}>
+          <form>
             <div className="payment-date-item payment-date-item-post">
               <input
                 type="radio"
@@ -260,10 +262,7 @@ const Purchase = () => {
         </div>
         <div className="totalSum">Загальна сумма : {totalSum}</div>
         <div className="purchase-product-details-item-btn">
-          <button
-            className="purchase-product-details-item-button"
-            onClick={handleSubmit(handleSubmitOrder)}
-          >
+          <button className="purchase-product-details-item-button">
             Замовити
           </button>
         </div>

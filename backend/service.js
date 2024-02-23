@@ -31,7 +31,7 @@ app.get('/services', (req, res) => {
         return;
       }
       const jsonData = JSON.stringify(result, null, 2);
-      fs.writeFile( "../src/json/service.json",
+      fs.writeFile( "../frontend/src/json/service.json",
       '{"service" :' + jsonData + "}", (err) => {
         if (err) {
           console.error('Помилка запису у файл: ' + err.stack);

@@ -31,7 +31,7 @@ app.get('/categories', (req, res) => {
         return;
       }
       const jsonData = JSON.stringify(result, null, 2);
-      fs.writeFile( "../src/json/categorie.json",
+      fs.writeFile( "../frontend/src/json/categorie.json",
       '{"categorie" :' + jsonData + "}", (err) => {
         if (err) {
           console.error('Помилка запису у файл: ' + err.stack);

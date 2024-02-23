@@ -31,7 +31,7 @@ app.get('/producers', (req, res) => {
         return;
       }
       const jsonData = JSON.stringify(result, null, 2);
-      fs.writeFile( "../src/json/producer.json",
+      fs.writeFile( "../frontend/src/json/producers.json",
       '{"producer" :' + jsonData + "}", (err) => {
         if (err) {
           console.error('Помилка запису у файл: ' + err.stack);

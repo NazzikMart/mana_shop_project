@@ -6,14 +6,13 @@ import Contact from "../../UI/Contact/Contact";
 import Besket from "../../UI/Besket/Besket";
 import HomePage from "../../Functional/HomePage/HomePage";
 import Profile from "../Profile/Profile";
-import Product from "../Product/Product";
 import Remont from "../../UI/Remont/Remont";
 import User from "../User/User";
 import Purchase from "../../UI/Purchase/Purchase";
 import "./Navbar.css";
+import Product from '../../UI/Product/Product.js'
 import { useContext } from 'react';
 import { AppContext } from "../App/App";
-
 const Navbar = () => {
   const { userData } = useContext(AppContext);
 
@@ -65,7 +64,7 @@ const Navbar = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/besket" element={<Besket />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/product" element={<Product />} />
+        <Route path="/productInfo" element = {<Product/>} />
       </Routes>
     </div>
   );

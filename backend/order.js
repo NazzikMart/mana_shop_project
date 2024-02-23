@@ -1,12 +1,14 @@
 const express = require("express");
 const mysql = require("mysql");
 const bodyParser = require("body-parser");
+const cors = require("cors");
 
 const app = express();
+app.use(cors());
 
 app.use(bodyParser.json());
 
-const PORT = 3001;
+const PORT = 5005;
 
 const connection = mysql.createConnection({
   host: "localhost",
@@ -21,7 +23,6 @@ connection.connect((err) => {
     throw err;
   }
   console.log("Підключено до бази даних MySQL");
-  
 
   const createTableQuery = `
     CREATE TABLE IF NOT EXISTS orders (
@@ -44,16 +45,32 @@ connection.connect((err) => {
 });
 
 app.post("/api/orders", (req, res) => {
-  const { name, phoneNumber, deliveryMethod, npOffice, paymentMethod, totalSum } = req.body;
+  const {
+    name,
+    phoneNumber,
+    deliveryMethod,
+    npOffice,
+    paymentMethod,
+    totalSum,
+  } = req.body;
   const sql = `
     INSERT INTO orders (name, phoneNumber, deliveryMethod, npOffice, paymentMethod, totalSum) 
     VALUES (?, ?, ?, ?, ?, ?)
   `;
-  const values = [name, phoneNumber, deliveryMethod, npOffice, paymentMethod, totalSum];
+  const values = [
+    name,
+    phoneNumber,
+    deliveryMethod,
+    npOffice,
+    paymentMethod,
+    totalSum,
+  ];
   connection.query(sql, values, (err, result) => {
     if (err) {
       console.error("Помилка при збереженні даних у базу даних:", err.message);
-      res.status(500).json({ error: "Помилка сервера. Будь ласка, спробуйте ще раз." });
+      res
+        .status(500)
+        .json({ error: "Помилка сервера. Будь ласка, спробуйте ще раз." });
       return;
     }
     console.log("Дані успішно збережено у базі даних.");

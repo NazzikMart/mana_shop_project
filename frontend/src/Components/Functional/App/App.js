@@ -73,9 +73,6 @@ const App = () => {
     setOrders(updatedOrders);
     setTotalCost(totalCost);
   };
-  const infoProduct = (item) => {
-    setInfoProducts([item]);
-  };
 
   const removeProduct = (productId) => {
     setOrders((prevOrders) =>
@@ -200,13 +197,17 @@ const App = () => {
     removeProduct(productId);
   };
 
+  const handleMoreInfoClick = (item) => {
+    setInfoProducts(item);
+    console.log(item);
+  };
+
   const contextValues = {
     product,
     addToOrder,
     orders,
     removeProduct,
     totalCost,
-    infoProduct,
     infoProducts,
     updateOrders,
     searchResults,
@@ -232,6 +233,7 @@ const App = () => {
     toggleAccount,
     isAccount,
     userData,
+    handleMoreInfoClick,
   };
 
   return (

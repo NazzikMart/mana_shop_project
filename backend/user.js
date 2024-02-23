@@ -27,4 +27,4 @@ db.query(query, (err, date) => {
       element.id
     );
   }
-});
+}) ;

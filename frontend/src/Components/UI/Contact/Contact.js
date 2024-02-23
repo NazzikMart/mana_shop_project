@@ -55,7 +55,7 @@ const Contact = () => {
           <span className="contact-info-item__name">Адреса</span>
           <span className="contact-info-item__desc">
             <a href="#" className="contact-info-item__desc">
-              м . Тернопіль , вул. Бродівська 14
+              м . Тернопіль
             </a>
           </span>
         </div>
@@ -73,7 +73,7 @@ const Contact = () => {
           <span className="contact-info-item__name">Телеграм</span>
           <span className="contact-info-item__desc">
             <a href="https://t.me/sotatern" className="contact-info-item__desc">
-              Сота - студія техніки
+              MaNa
             </a>
           </span>
         </div>
@@ -82,7 +82,7 @@ const Contact = () => {
           <span className="contact-info-item__name">Пошта</span>
           <span className="contact-info-item__desc">
             <a href="#" className="contact-info-item__desc">
-              studiatehnikisota@gmail.com
+              nazzikmart@gmail.com
             </a>
           </span>
         </div>

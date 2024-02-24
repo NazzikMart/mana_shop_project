@@ -10,7 +10,7 @@ const connection = mysql.createConnection({
   password: "usbw",
   database: "mana_shop",
 });
- 
+
 app.get("/exportData", (req, res) => {
   const query = "SELECT * FROM products";
 

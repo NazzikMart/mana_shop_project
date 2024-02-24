@@ -16,6 +16,43 @@ const App = () => {
   const [infoProducts, setInfoProducts] = useState([]);
   const [producers, setProducers] = useState(producer.producer);
   const [categories, setCategories] = useState(categorie.categorie);
+  const [categoriesCatalog, setCategoriesCatalog] = useState([
+    {
+      id: 1,
+      key: "all",
+      name: "Всі",
+    },
+    {
+      id: 2,
+      key: "Kettle",
+      name: "Чайники",
+    },
+    {
+      id: 3,
+      key: "telephone",
+      name: "Телефони",
+    },
+    {
+      id: 4,
+      key: "Grill",
+      name: "Грилі",
+    },
+    {
+      id: 5,
+      key: "Microwave",
+      name: "Мікрохвильовки",
+    },
+    {
+      id: 6,
+      key: "VacuumCleaner",
+      name: "Пилососи",
+    },
+    {
+      id: 7,
+      key: "ThermalMug",
+      name: "Термокружки",
+    },
+  ]);
   const [currentItems, setCurrentItems] = useState([...product]);
   const [maxPrice, setMaxPrice] = useState("");
   const [minPrice, setMinPrice] = useState("");
@@ -63,7 +100,9 @@ const App = () => {
     const isItemInOrder = orders.some((orderItem) => orderItem.id === item.id);
 
     if (!isItemInOrder) {
-      setOrders([...orders, item]);
+      const updatedOrders = [...orders, item];
+      setOrders(updatedOrders);
+      localStorage.setItem("orders", JSON.stringify(updateOrders));
       calculateTotalCost();
     } else {
       console.log("Цей товар вже є в кошику");
@@ -100,13 +139,16 @@ const App = () => {
     }
   };
 
-  const choseCategoryNew = (category) => {
+  const choseCategoryNew = (category , heading) => {
     if (category === "all") {
       setCurrentItems(product);
-      return;
+    } else {
+      setCurrentItems(
+        product.filter(
+          (el) => el.category === category || el.heading === heading
+        )
+      );
     }
-
-    setCurrentItems(product.filter((el) => el.category === category));
   };
 
   const handleSearch = (event) => {
@@ -224,7 +266,6 @@ const App = () => {
     showFunction,
     choseCategory,
     handleSearch,
-    choseCategoryNew,
     handleRemoveProduct,
     decrementCounter,
     incrementCounter,
@@ -234,6 +275,9 @@ const App = () => {
     isAccount,
     userData,
     handleMoreInfoClick,
+    setOrders,
+    categoriesCatalog , 
+    choseCategoryNew , 
   };
 
   return (

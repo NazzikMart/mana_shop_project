@@ -4,10 +4,14 @@ import ProductCatalogFilter from "../ProductCatalogFilter/ProductCatalogFilter.j
 import ProductCatalogSort from "../ProductCatalogSort/ProductCatalogSort.js";
 import Card from "../Card/Card.js";
 import ServiceAndService from "../ServiceAndService/ServiceAndService.js";
+import { useContext } from "react";
+import { AppContext } from "../../Functional/App/App.js";
 
 
 const ProductCatalog = (props) => {
+  const {   categoriesCatalog , choseCategoryNew  } = useContext(AppContext);
   return (
+    
     <React.Fragment>
       <div className="product-catalog-wrapper-osn">
         <ServiceAndService services={props.services} />

@@ -7,11 +7,15 @@
 }
 
 .BestSellersName {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 600;
   margin-left: 20px;
   display: block;
   margin-bottom: 30px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
 }
 
 /* .BestCard {

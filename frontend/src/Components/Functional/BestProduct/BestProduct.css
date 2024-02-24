@@ -1,0 +1,100 @@
+.product-best-catalog{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.best-card {
+  border: 3px solid #e6e6e6;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ffffff;
+  width: 340px;
+  padding-top: 20px;
+  padding: 20px;
+  margin: 5px;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+.best-card:hover {
+  text-decoration: none;
+  transform: scale(0.9);
+}
+
+.best-image-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.best-image {
+  width: 80%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.best-image:hover {
+  transform: scale(1.1);
+}
+
+.best-info {
+  padding: 10px;
+  text-align: left;
+  text-align: center;
+}
+
+.best-title {
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+}
+.best-title:hover {
+  text-decoration: none;
+}
+.best-rating {
+  display: flex;
+  align-items: center;
+  color: #ffa500;
+  margin-bottom: 12px;
+}
+.best-description {
+  display: block;
+  padding: 10px;
+  padding-left: 0px;
+  font-size: 12px;
+}
+.star {
+  font-size: 18px;
+  margin-right: 2px;
+}
+
+.rating-text {
+  margin-left: 5px;
+  font-size: 16px;
+}
+.best-model {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 600px) {
+  .best-card {
+    width: 100%;
+  }
+}
+
+.best-items-catalog {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: flex-start;
+}
+
+.best-card .best-title {
+  font-size: 30px;
+}

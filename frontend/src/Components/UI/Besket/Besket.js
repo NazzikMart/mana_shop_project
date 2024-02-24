@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Besket.css";
 import { AppContext } from "../../Functional/App/App";
@@ -11,7 +11,19 @@ const Besket = () => {
     incrementCounter,
     decrementCounter,
     handleRemoveProduct,
+    setOrders,
   } = useContext(AppContext);
+
+  // useEffect(() => {
+  //   const savedOrders = localStorage.getItem("orders");
+  //   if (savedOrders) {
+  //     setOrders(JSON.parse(savedOrders));
+  //   }
+  // }, [setOrders]);
+
+  // useEffect(() => {
+  //   localStorage.setItem("orders", JSON.stringify(orders));
+  // }, [orders]);
 
   return (
     <div className="beskett">

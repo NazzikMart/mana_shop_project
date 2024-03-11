@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./BestSellers.css";
-import "../../media.css";
 import Card from "../../UI/Card/Card";
 import BestProduct from "../BestProduct/BestProduct";
 

@@ -28,7 +28,6 @@ export default function BestProduct() {
                 <p className="best-model">{item.model}</p>
                 <p className="best-price">
                 </p>
-                <p className="best-description">{item.description}</p>
               </div>
             </div>
           ))}

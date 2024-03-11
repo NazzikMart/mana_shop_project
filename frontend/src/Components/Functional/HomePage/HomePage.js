@@ -10,7 +10,7 @@ const HomePage = () => {
       <Header />
       <span className="BestSellersName">Лідери продажів</span>
       <BestSellers />
-      <Gadget />
+      <Gadget /> 
       <button className="btn-shop-ip">Замовити</button>
     </div>
   );

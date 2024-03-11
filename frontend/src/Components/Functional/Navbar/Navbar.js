@@ -45,7 +45,7 @@ const Navbar = () => {
         <div className="container">
           <div className="section-left">
             <h1 className="section-title">
-              В подарунок до Iphon 15 Pro Max отримую AirPods
+              В подарунок до Iphone 15 Pro Max отримую AirPods
             </h1>
           </div>
           <div className="section-right">

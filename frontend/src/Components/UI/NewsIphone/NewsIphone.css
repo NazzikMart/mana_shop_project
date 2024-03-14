@@ -1,0 +1,36 @@
+.news {
+    padding-bottom: 150px;
+}
+
+
+.news-title {
+    color: #717171;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 87px;
+    margin-bottom: 50px;
+}
+
+.news-items {
+    display: flex;
+    width: 1100px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.text-bold {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.news-item p {
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.text-bold {
+    font-size: 25px;
+    font-weight: 800;
+}

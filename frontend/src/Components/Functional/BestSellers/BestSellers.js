@@ -1,6 +1,4 @@
-import React, { useState } from "react";
 import "./BestSellers.css";
-import Card from "../../UI/Card/Card";
 import BestProduct from "../BestProduct/BestProduct";
 
 const BestSellers = (props) => {

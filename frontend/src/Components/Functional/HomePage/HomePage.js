@@ -3,6 +3,8 @@ import BestSellers from "../BestSellers/BestSellers";
 import Header from "../../UI/Header/Header.js";
 import Gadget from "../../UI/Gadget/Gadget.js";
 import "./HomePage.css";
+import NewsIphone from "../../UI/NewsIphone/NewsIphone.js";
+import FormIphone from "../../UI/FormIphone/FormIphone.js";
 
 const HomePage = () => {
   return (
@@ -10,8 +12,11 @@ const HomePage = () => {
       <Header />
       <span className="BestSellersName">Лідери продажів</span>
       <BestSellers />
-      <Gadget /> 
+      <Gadget />
+
       <button className="btn-shop-ip">Замовити</button>
+      <NewsIphone />
+      <FormIphone/>
     </div>
   );
 };

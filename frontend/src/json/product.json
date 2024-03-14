@@ -1,5 +1,5 @@
 {"product" :[
-  {
+{
     "id": 15,
     "name": "Чайник",
     "price": "1100.00",
@@ -58,5 +58,5 @@
     "heading": "phone",
     "img": "https://i.allo.ua/media/catalog/product/cache/3/image/710x600/602f0fa2c1f0d1ba5e241f914e856ff9/3/2/3214_2211400052.1200x1200.jpg",
     "description": "Потужний пилосос SilverCrest від виробника Poco. Ідеально підходить для прибирання будинку та офісу."
-  }
+  }  
 ]}

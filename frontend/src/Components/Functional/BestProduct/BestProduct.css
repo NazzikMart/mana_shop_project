@@ -1,18 +1,18 @@
 .product-best-catalog{
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 30px;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .best-card {
-  border: 3px solid #e6e6e6;
   border-radius: 10px;
   overflow: hidden;
   background-color: #ffffff;
-  width: 340px;
+  width: 100px;
   padding-top: 20px;
   padding: 10px;
   margin: 5px;

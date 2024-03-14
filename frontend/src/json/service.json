@@ -15,7 +15,8 @@
     "id": 3,
     "iconClass": "fa-solid fa-laptop-file",
     "name": "Ремонт",
-    "description": "Відремонтуємо будь-яку річ швидко та якісно"
+    "description": "Відремонтуємо будь-яку річ швидко та якісно" , 
+    "to" : "/remont"
   },
   {
     "id": 4,

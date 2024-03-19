@@ -1,62 +1,160 @@
-{"product" :[
 {
-    "id": 15,
-    "name": "Чайник",
-    "price": "1100.00",
-    "model": "SilverCrest",
-    "category": "Kettle",
-    "counter": 1,
-    "producer": "Poco",
-    "heading": "phone",
-    "img": "https://i.allo.ua/media/catalog/product/cache/3/image/710x600/602f0fa2c1f0d1ba5e241f914e856ff9/import/3791650014461147.jpg",
-    "description": "Елегантний чайник SilverCrest від виробника Poco. Має велику потужність і стильний дизайн."
-  },
-  {
-    "id": 16,
-    "name": "Телефон",
-    "price": "5600.00",
-    "model": "SilverCrest",
-    "category": "telephone",
-    "counter": 1,
-    "producer": "Poco",
-    "heading": "phone",
-    "img": "https://i.allo.ua/media/catalog/product/cache/3/image/710x600/602f0fa2c1f0d1ba5e241f914e856ff9/1/2/123_11_36.jpg",
-    "description": "Остання модель телефону SilverCrest від виробника Poco. Оснащений найновішими функціями та камерами високої роздільної здатності."
-  },
-  {
-    "id": 17,
-    "name": "Гриль",
-    "price": "1100.00",
-    "model": "SilverCrest",
-    "category": "Grill",
-    "counter": 1,
-    "producer": "Poco",
-    "heading": "phone",
-    "img": "https://i.allo.ua/media/catalog/product/cache/3/image/710x600/602f0fa2c1f0d1ba5e241f914e856ff9/g/c/gc772d30-1.jpg",
-    "description": "Практичний гриль SilverCrest для вашого дому від виробника Poco. Ідеально підходить для приготування смачних страв на відкритому повітрі або в приміщенні."
-  },
-  {
-    "id": 18,
-    "name": "Мікрохвильовка",
-    "price": "1100.00",
-    "model": "SilverCrest",
-    "category": "Microwave",
-    "counter": 1,
-    "producer": "Poco",
-    "heading": "phone",
-    "img": "https://i.allo.ua/media/catalog/product/cache/3/image/710x600/602f0fa2c1f0d1ba5e241f914e856ff9/1/5/1574995.jpg",
-    "description": "Потужна мікрохвильовка SilverCrest від виробника Poco. Швидко нагріває їжу та має зручне керування."
-  },
-  {
-    "id": 19,
-    "name": "Пилосос",
-    "price": "1100.00",
-    "model": "SilverCrest",
-    "category": "VacuumCleaner",
-    "counter": 1,
-    "producer": "Poco",
-    "heading": "phone",
-    "img": "https://i.allo.ua/media/catalog/product/cache/3/image/710x600/602f0fa2c1f0d1ba5e241f914e856ff9/3/2/3214_2211400052.1200x1200.jpg",
-    "description": "Потужний пилосос SilverCrest від виробника Poco. Ідеально підходить для прибирання будинку та офісу."
-  }  
-]}
+  "product": [
+    {
+      "id": 1,
+      "name": "iPhone 7",
+      "price": "1500.00",
+      "model": "Apple",
+      "category": "Smartphone",
+      "counter": 1,
+      "producer": "Apple Inc.",
+      "heading": "phone",
+      "img": "https://www.4g.kiev.ua/uploads/shop/products/large/c4f08f7c9fd10bff1bec74a7cd9245ea.jpg",
+      "description": "iPhone 7 - стильний смартфон з чудовою камерою та потужним процесором."
+    },
+    {
+      "id": 2,
+      "name": "iPhone 8",
+      "price": "2000.00",
+      "model": "Apple",
+      "category": "Smartphone",
+      "counter": 1,
+      "producer": "Apple Inc.",
+      "heading": "phone",
+      "img": "https://www.4g.kiev.ua/uploads/shop/products/large/f319939932ba3bc702a78beb3957fb84.jpg",
+      "description": "iPhone 8 - сучасний смартфон з вражаючим дизайном та високоякісним дисплеєм."
+    },
+    {
+      "id": 3,
+      "name": "iPhone X",
+      "price": "3500.00",
+      "model": "Apple",
+      "category": "Smartphone",
+      "counter": 1,
+      "producer": "Apple Inc.",
+      "heading": "phone",
+      "img": "data:image/jpeg;base64,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",
+      "description": "iPhone X - революційний смартфон з безрамковим дисплеєм та розпізнаванням обличчя."
+    },
+    {
+      "id": 4,
+      "name": "iPhone XS",
+      "price": "4500.00",
+      "model": "Apple",
+      "category": "Smartphone",
+      "counter": 1,
+      "producer": "Apple Inc.",
+      "heading": "phone",
+      "img": "https://i5.walmartimages.com/seo/Restored-iPhone-XS-Max-64GB-Gold-Sprint-Refurbished_ad9d3aab-cff4-4a4f-aed8-b30454554067_1.34ee2acd55369419919e101b037ed47a.jpeg",
+      "description": "iPhone XS - потужний смартфон з подвійною камерою та розширеною продуктивністю."
+    },
+    {
+      "id": 5,
+      "name": "iPhone 11",
+      "price": "5000.00",
+      "model": "Apple",
+      "category": "Smartphone",
+      "counter": 1,
+      "producer": "Apple Inc.",
+      "heading": "phone",
+      "img": "data:image/jpeg;base64,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",
+      "description": "iPhone 11 - сучасний смартфон з потрійною камерою та підвищеною ефективністю батареї."
+    },
+    {
+      "id": 6,
+      "name": "iPhone 12",
+      "price": "6000.00",
+      "model": "Apple",
+      "category": "Smartphone",
+      "counter": 1,
+      "producer": "Apple Inc.",
+      "heading": "phone",
+      "img": "data:image/jpeg;base64,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",
+      "description": "iPhone 12 - найновіший смартфон з покращеною камерою та підтримкою 5G."
+    },
+    {
+      "id": 7,
+      "name": "iPhone 13",
+      "price": "7000.00",
+      "model": "Apple",
+      "category": "Smartphone",
+      "counter": 1,
+      "producer": "Apple Inc.",
+      "heading": "phone",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQotZWZyiBAY5EoIAuRull_qSH_LwU9B_UACQ&usqp=CAU",
+      "description": "iPhone 13 - найновіший смартфон з покращеною камерою, потужним чіпом та підвищеною ефективністю."
+    },
+    {
+      "id": 8,
+      "name": "iPhone 14",
+      "price": "8000.00",
+      "model": "Apple",
+      "category": "Smartphone",
+      "counter": 1,
+      "producer": "Apple Inc.",
+      "heading": "phone",
+      "img": "https://hotline.ua/img/tx/343/3437076345.jpg",
+      "description": "iPhone 14 - очікуваний смартфон з новим дизайном та підвищеною продуктивністю."
+    },
+    {
+      "id": 9,
+      "name": "iPhone 15",
+      "price": "9000.00",
+      "model": "Apple",
+      "category": "Smartphone",
+      "counter": 1,
+      "producer": "Apple Inc.",
+      "heading": "phone",
+      "img": "https://newtime.ua/upload/2023-09/JWHlEpcNyjSp4y5.webp",
+      "description": "iPhone 15 - майбутній смартфон з передовими технологіями та інноваційним дизайном."
+    },
+    {
+      "id": 10,
+      "name": "iPhone 7 Mini",
+      "price": "1200.00",
+      "model": "Apple",
+      "category": "Smartphone",
+      "counter": 1,
+      "producer": "Apple Inc.",
+      "heading": "phone",
+      "img": "https://imei.org/storage/files/images/791/preview/apple-iphone-7-2.png",
+      "description": "iPhone 7 Mini - компактна версія популярного смартфона з усіма основними функціями."
+    },
+    {
+      "id": 11,
+      "name": "iPhone 8 Mini",
+      "price": "1700.00",
+      "model": "Apple",
+      "category": "Smartphone",
+      "counter": 1,
+      "producer": "Apple Inc.",
+      "heading": "phone",
+      "img": "data:image/jpeg;base64,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",
+      "description": "iPhone 8 Mini - зменшена версія смартфона з вражаючими характеристиками та компактним дизайном."
+    } , 
+    {
+      "id": 18,
+      "name": "iPhone SE 3",
+      "price": "1300.00",
+      "model": "Apple",
+      "category": "Smartphone",
+      "counter": 1,
+      "producer": "Apple Inc.",
+      "heading": "phone",
+      "img": "https://newtime.ua/image/import/catalog/iPhone/iPhone-SE-2022/Midnight.webp",
+      "description": "iPhone SE 3 - доступний смартфон з потужним процесором та популярним дизайном."
+    },
+    {
+      "id": 19,
+      "name": "iPhone SE 4",
+      "price": "1400.00",
+      "model": "Apple",
+      "category": "Smartphone",
+      "counter": 1,
+      "producer": "Apple Inc.",
+      "heading": "phone",
+      "img": "data:image/jpeg;base64,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",
+      "description": "iPhone SE 4 - нова версія популярного смартфона з покращеними характеристиками."
+    }
+  ]
+}

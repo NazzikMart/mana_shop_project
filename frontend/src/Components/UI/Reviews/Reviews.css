@@ -1,0 +1,53 @@
+.reviews {
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 0px;
+  padding-bottom: 100px;
+}
+.reviews-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 150px;
+}
+.reviews-name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.reviews-title {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 100px;
+}
+.reviews-item__name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.reviews-date {
+  font-size: 14px;
+  color: rgb(170, 170, 170);
+}
+.reviews-item_merits div {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.reviews-item_comment div {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.reviews-item_disadvantages div {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.reviews-item_merits , .reviews-item_disadvantages , .reviews-item_comment {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

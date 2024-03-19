@@ -1,0 +1,42 @@
+.distavka{
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(239, 239, 239);
+    margin-bottom: 100px;
+    font-size: 20px;
+}
+.dostavka-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.dostavka-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: white;
+    padding: 30px;
+    padding-bottom: 20px;
+    align-items: center;
+    margin: 20px;
+    border-radius: 20px;
+}
+.dostavka-item img{
+    width: 10%;
+}
+
+.dostavka-item p {
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+}
+.dostavka-item span {
+ font-weight: 500;
+
+}
+.dostavka-logo{
+    font-size: 50px;
+}

@@ -1,5 +1,8 @@
 .product {
   margin-top: 40px;
+  background-color: rgb(239, 239, 239);
+  padding: 100px;
+  text-align: center;
 }
 
 .product-title {
@@ -16,6 +19,7 @@
   padding: 20px;
   padding-left: 40px;
   padding-right: 40px;
+
 }
 
 .product-item {
@@ -23,6 +27,8 @@
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   padding: 10px;
   transition: all 0.3s ease;
+  background-color: white;
+  border-radius: 20px;
 }
 
 .product-item__name {

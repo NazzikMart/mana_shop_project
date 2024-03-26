@@ -19,7 +19,6 @@
   padding: 20px;
   padding-left: 40px;
   padding-right: 40px;
-
 }
 
 .product-item {
@@ -52,4 +51,17 @@
   .product-item__images {
     width: 50%;
   }
+}
+
+.btn-shop-ip {
+  display: flex;
+  width: 200px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+.btn-shop-ip:hover{
+  text-decoration: none;
+  color: white;
 }

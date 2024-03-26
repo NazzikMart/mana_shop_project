@@ -5,6 +5,7 @@ import ip1 from "../../../img/ip1.jpg";
 import ip2 from "../../../img/ip2.jpg";
 import ip3 from "../../../img/ip13.jpg";
 import ip4 from "../../../img/ip4.jpg";
+import { Link } from "react-router-dom";
 
 export default function Gadget() {
   const [state, setState] = useState([
@@ -30,7 +31,7 @@ export default function Gadget() {
             );
           })}
         </div>{" "}
-        <button className="btn-shop-ip">Замовити</button>
+        <Link className="btn-shop-ip" to='/catalog'>Замовити</Link>
       </div>
     </div>
   );

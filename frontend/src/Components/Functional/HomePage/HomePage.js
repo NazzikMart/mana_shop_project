@@ -8,8 +8,6 @@ import Dostavka from "../../UI/Dostavka/Dostavka.js";
 import Reviews from "../../UI/Reviews/Reviews.js";
 import HomeForm from "../../UI/HomeForm/HomeForm.js";
 
-
-
 const HomePage = () => {
   return (
     <Fragment className="homepage-wrapper">
@@ -22,8 +20,7 @@ const HomePage = () => {
       <NewsIphone />
       <Dostavka />
       <Reviews />
-      <HomeForm/>
-
+      <HomeForm />
     </Fragment>
   );
 };

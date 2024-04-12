@@ -38,18 +38,32 @@
   border-radius: 10px;
   border: 2px solid blueviolet;
 }
-.form-item__button button {
-  width: 200px;
+.form-item__button  {
+  width: 300px;
   height: 40px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 5px;
   background-color: blueviolet;
   color: white;
   transition: all 0.3s ease;
 }
-.form-item__button button:hover {
+.form-item__button:hover {
   width: 200px;
   height: 40px;
   border-radius: 5px;
   background-color: rgb(49, 9, 87);
   color: white;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .form-item__inputs{
+    flex-direction: column;
+  }
+  .form-item__button{
+    width: 100%;
+  }
 }

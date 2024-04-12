@@ -34,3 +34,17 @@
     font-size: 25px;
     font-weight: 800;
 }
+
+
+@media (max-width : 1200px){
+    .news-items{
+        flex-direction: column;
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
+    }
+    .news-item{
+        font-size: 10px;
+        width: 100%;
+    }
+}

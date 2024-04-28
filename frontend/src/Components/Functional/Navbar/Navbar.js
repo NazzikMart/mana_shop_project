@@ -10,8 +10,8 @@ import Remont from "../../UI/Remont/Remont";
 import User from "../User/User";
 import Purchase from "../../UI/Purchase/Purchase";
 import "./Navbar.css";
-import Product from '../../UI/Product/Product.js'
-import { useContext } from 'react';
+import Product from "../../UI/Product/Product.js";
+import { useContext } from "react";
 import { AppContext } from "../App/App";
 const Navbar = () => {
   const { userData } = useContext(AppContext);
@@ -22,7 +22,8 @@ const Navbar = () => {
         <div className="container">
           <div className="header-left">
             <h1>
-              <span className="header-logo">МаНа</span> - магазин цифрової техніки
+              <span className="header-logo">МаНа</span> - магазин цифрової
+              техніки
             </h1>
           </div>
           <div className="header-right">
@@ -53,19 +54,6 @@ const Navbar = () => {
           </div>
         </div>
       </section>
-
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/remont" element={<Remont />} />
-        <Route path="/user" element={<User userData={userData} />} />
-        <Route path="/purchase" element={<Purchase />} />
-        <Route path="/catalog" element={<ProductCatalog />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/besket" element={<Besket />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/productInfo" element = {<Product/>} />
-      </Routes>
     </div>
   );
 };

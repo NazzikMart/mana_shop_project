@@ -6,7 +6,10 @@ const Product = () => {
   const { searchTerm, searchResults, currentItems, addToOrder, infoProduct  , handleMoreInfoClick} =
   useContext(AppContext);
   console.log(infoProduct)
-  return <div>
+  return <div className="product-info__card">
+        {currentItems.map((el) =>{
+            <div>{el.name}</div>
+        })}
   </div>;
 };
 

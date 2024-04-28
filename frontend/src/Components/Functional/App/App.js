@@ -7,6 +7,8 @@ import producer from "../../../json/producer.json";
 import service from "../../../json/service";
 import "../../../index.css";
 import axios from "axios";
+import { Route } from "react-router";
+import Routs from "../../../Routs/Routs.js";
 
 export const AppContext = createContext();
 const App = () => {
@@ -284,6 +286,7 @@ const App = () => {
     <div className="App">
       <AppContext.Provider value={contextValues}>
         <Navbar />
+        <Routs/>
         <Footer />
       </AppContext.Provider>
     </div>

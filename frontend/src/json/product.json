@@ -164,8 +164,8 @@
       "category": "Smartphone",
       "counter": 1,
       "producer": "Samsung Electronics",
-      "heading": "phone" , 
-      "img" : "https://hotline.ua/img/tx/424/4244103185.jpg"
+      "heading": "phone",
+      "img": "https://hotline.ua/img/tx/424/4244103185.jpg"
     },
     {
       "id": 21,
@@ -175,8 +175,8 @@
       "category": "Smartphone",
       "counter": 1,
       "producer": "Xiaomi Corporation",
-      "heading": "phone" , 
-      "img" : "https://kokos.com.ua/content/images/4/480x480l50nn0/75275954755001.jpg"
+      "heading": "phone",
+      "img": "https://kokos.com.ua/content/images/4/480x480l50nn0/75275954755001.jpg"
     },
     {
       "id": 22,
@@ -186,8 +186,68 @@
       "category": "Smartphone",
       "counter": 1,
       "producer": "OnePlus Technology (Shenzhen) Co., Ltd.",
-      "heading": "phone" , 
-      "img" : "https://hotline.ua/img/tx/337/3378059885.jpg"
+      "heading": "phone",
+      "img": "https://hotline.ua/img/tx/337/3378059885.jpg"
+    },
+    {
+      "id": 22,
+      "name": "Panasonic NN-ST64JW",
+      "price": "1800.00",
+      "model": "Panasonic",
+      "category": "Microwave",
+      "counter": 1,
+      "producer": "Panasonic Corporation",
+      "heading": "microwave",
+      "description": "Panasonic NN-ST64JW - компактна мікрохвильова піч з великим обсягом та багатьма функціями." , 
+      "img": "https://www.appliancesonline.com.au/ak/c/6/d/d/c6ddd3623d8bfa7cfb26a08b8071527251c822ec_NN_ST64JWQPQ_Left_high-high.jpeg"
+    },
+    {
+      "id": 23,
+      "name": "Whirlpool MWF 427 SL",
+      "price": "2400.00",
+      "model": "Whirlpool",
+      "category": "Microwave",
+      "counter": 1,
+      "producer": "Whirlpool Corporation",
+      "heading": "microwave",
+      "description": "Whirlpool MWF 427 SL - сучасна мікрохвильова піч з елегантним дизайном та інтелектуальним управлінням.",
+      "img": "https://s.pn.com.ua/i/md/2137/4275163/4275163_00p.jpg"
+    },
+    {
+      "id": 24,
+      "name": "Bosch HMT84M624",
+      "price": "2000.00",
+      "model": "Bosch",
+      "category": "Microwave",
+      "counter": 1,
+      "producer": "Bosch Hausgeräte GmbH",
+      "heading": "microwave",
+      "description": "Bosch HMT84M624 - надійна мікрохвильова піч зі зручними налаштуваннями та великою ємністю.",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQfMH7CCGY67BF9QLtEV2lsWCo2Ic21-Dj6y5OsB_xJg&s"
+    },
+    {
+      "id": 25,
+      "name": "Haier HGN-2070MS",
+      "price": "1600.00",
+      "model": "Haier",
+      "category": "Microwave",
+      "counter": 1,
+      "producer": "Haier Group Corporation",
+      "heading": "microwave",
+      "description": "Haier HGN-2070MS - економічна мікрохвильова піч з простим управлінням та компактним дизайном.",
+      "img": "https://m.ua/jpg/748217.jpg"
+    },
+    {
+      "id": 26,
+      "name": "Electrolux EMS21400W",
+      "price": "1900.00",
+      "model": "Electrolux",
+      "category": "Microwave",
+      "counter": 1,
+      "producer": "Electrolux AB",
+      "heading": "microwave",
+      "description": "Electrolux EMS21400W - елегантна мікрохвильова піч з широким функціоналом та стильним дизайном.",
+      "img": "https://www.nl.ua/upload/iblock/9d3/31011692.jpg"
     }
   ]
 }

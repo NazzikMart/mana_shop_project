@@ -2,9 +2,9 @@ import React, { useContext } from "react";
 import "./Card.css";
 import { AppContext } from "../../Functional/App/App";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Card = () => {
-  // Витягуємо значення контексту за допомогою useContext
   const {
     searchTerm,
     searchResults,
@@ -12,6 +12,9 @@ const Card = () => {
     addToOrder,
     handleMoreInfoClick,
   } = useContext(AppContext);
+
+  const [selectedItem, setSelectedItem] = useState(null);
+
   return (
     <React.Fragment>
       <div className="product-catalog-items">

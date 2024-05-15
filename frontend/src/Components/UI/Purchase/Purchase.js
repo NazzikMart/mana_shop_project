@@ -1,18 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./Purchase.css";
 import { useForm, Controller } from "react-hook-form";
-import axios from "axios"; // Додали axios для відправки запитів на сервер
+import axios from "axios"; 
 import { AppContext } from "../../Functional/App/App";
 
 const Purchase = () => {
-  const {
-    orders,
-    incrementCounter,
-    decrementCounter,
-    handleRemoveProduct,
-  } = useContext(AppContext);
+  const { orders, incrementCounter, decrementCounter, handleRemoveProduct } =
+    useContext(AppContext);
 
   const [totalSum, setTotalSum] = useState(0);
+  const [selectedPaymentMethod, setSelectedPaymentMethod] = useState("");
 
   const {
     register,
@@ -30,7 +27,7 @@ const Purchase = () => {
   const calculateTotalSum = () => {
     let sum = 0;
     orders.forEach((el) => {
-      sum += Number(el.price) * el.counter; // Помножимо ціну товару на його кількість
+      sum += Number(el.price) * el.counter; 
     });
     setTotalSum(sum);
   };
@@ -38,7 +35,6 @@ const Purchase = () => {
   const deliveryMethod = watch("deliveryMethod");
 
   const handleSubmitOrder = async (e) => {
-   
     const formData = {
       name: watch("name"),
       phoneNumber: watch("phoneNumber"),
@@ -47,8 +43,8 @@ const Purchase = () => {
       paymentMethod: watch("paymentMethod"),
       totalSum: totalSum,
     };
-  
-  await  axios
+
+    await axios
       .post("http://localhost:3001/api/orders", formData)
       .then((response) => {
         console.log(response.data);
@@ -56,6 +52,10 @@ const Purchase = () => {
       .catch((error) => {
         console.error("Помилка відправки замовлення:", error);
       });
+  };
+
+  const handlePaymentMethodChange = (e) => {
+    setSelectedPaymentMethod(e.target.value);
   };
 
   return (
@@ -134,7 +134,6 @@ const Purchase = () => {
                     >
                       Нова Пошта
                     </option>
-                    {/* Додайте інші способи доставки за необхідності */}
                   </select>
                   {errors.deliveryMethod && (
                     <p className="error-message">
@@ -178,7 +177,6 @@ const Purchase = () => {
                         >
                           Відділення НП номер 2
                         </option>
-                        {/* Додайте інші варіанти відділень Нової Пошти */}
                       </select>
                       {errors.npOffice && (
                         <p className="error-message">
@@ -196,63 +194,19 @@ const Purchase = () => {
           <span className="payment-date-item-name">Оплата</span>
           <form>
             <div className="payment-date-item payment-date-item-post">
-              <input
-                type="radio"
-                {...register("paymentMethod", {
-                  required: "Будь ласка, оберіть спосіб оплати",
-                })}
-                onChange={() => setValue("paymentMethod", "payment-post")}
-                checked={watch("paymentMethod") === "payment-post"}
-              />
-              <span>Оплата під час отримання</span>
-            </div>
-
-            <div className="payment-date-item payment-date-item-privatpay">
-              <input
-                type="radio"
-                {...register("paymentMethod", {
-                  required: "Будь ласка, оберіть спосіб оплати",
-                })}
-                onChange={() => setValue("paymentMethod", "payment-privatpay")}
-                checked={watch("paymentMethod") === "payment-privatpay"}
-              />
-              <span>PrivatPay</span>
-            </div>
-
-            <div className="payment-date-item payment-date-item-googlepay">
-              <input
-                type="radio"
-                {...register("paymentMethod", {
-                  required: "Будь ласка, оберіть спосіб оплати",
-                })}
-                onChange={() => setValue("paymentMethod", "payment-googlepay")}
-                checked={watch("paymentMethod") === "payment-googlepay"}
-              />
-              <span>GooglePay</span>
-            </div>
-
-            <div className="payment-date-item payment-date-item-mastercard">
-              <input
-                type="radio"
-                {...register("paymentMethod", {
-                  required: "Будь ласка, оберіть спосіб оплати",
-                })}
-                onChange={() => setValue("paymentMethod", "payment-mastercard")}
-                checked={watch("paymentMethod") === "payment-mastercard"}
-              />
-              <span>Visa / MasterCard</span>
-            </div>
-
-            <div className="payment-date-item payment-date-item-portmone">
-              <input
-                type="radio"
-                {...register("paymentMethod", {
-                  required: "Будь ласка, оберіть спосіб оплати",
-                })}
-                onChange={() => setValue("paymentMethod", "payment-portmone")}
-                checked={watch("paymentMethod") === "payment-portmone"}
-              />
-              <span>Portmone.com</span>
+              <select
+                value={selectedPaymentMethod}
+                onChange={handlePaymentMethodChange}
+              >
+                <option value="">Оберіть метод оплати</option>
+                <option value="PrivatPay">PrivatPay</option>
+                <option value="GooglePay">GooglePay</option>
+                <option value="Visa / MasterCard">Visa / MasterCard</option>
+                <option value="Portmone.com">Portmone.com</option>
+                <option value="Оплата під час отримання">
+                  Оплата під час отримання
+                </option>
+              </select>
             </div>
 
             {errors.paymentMethod && (
@@ -304,8 +258,6 @@ const Purchase = () => {
                 </div>
               </div>
             </div>
-
-            
           );
         })}
       </div>

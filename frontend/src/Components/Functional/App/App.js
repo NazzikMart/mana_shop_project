@@ -69,6 +69,8 @@ const App = () => {
     password: "",
   });
   const [isAccount, setIsAcount] = useState(true);
+  const [selectedItem, setSelectedItem] = useState([]);
+
 
   const handleRegistration = async (data) => {
     try {
@@ -245,6 +247,10 @@ const App = () => {
     setInfoProducts(item);
     console.log(item);
   };
+  const handlerInfoItemClick = (item) => {
+    setSelectedItem(item);
+    console.log(item);
+  };
 
   const contextValues = {
     product,
@@ -280,6 +286,9 @@ const App = () => {
     setOrders,
     categoriesCatalog , 
     choseCategoryNew , 
+    selectedItem  , 
+    setSelectedItem , 
+    handlerInfoItemClick
   };
 
   return (

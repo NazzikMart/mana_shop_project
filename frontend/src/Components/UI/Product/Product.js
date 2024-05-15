@@ -3,13 +3,18 @@ import { useContext } from "react";
 import { AppContext } from "../../Functional/App/App";
 
 const Product = () => {
-  const { searchTerm, searchResults, currentItems, addToOrder, infoProduct  , handleMoreInfoClick} =
+  const { selectedItem } =
   useContext(AppContext);
-  console.log(infoProduct)
   return <div className="product-info__card">
-        {currentItems.map((el) =>{
-            <div>{el.name}</div>
-        })}
+ 
+  {selectedItem.map((el) =>{
+     return (
+      <div>
+          {el}
+      </div>
+     )
+  })}
+ 
   </div>;
 };
 

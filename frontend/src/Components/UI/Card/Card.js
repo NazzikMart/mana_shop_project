@@ -4,16 +4,17 @@ import { AppContext } from "../../Functional/App/App";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const Card = () => {
+const Card = (props) => {
   const {
     searchTerm,
     searchResults,
     currentItems,
     addToOrder,
     handleMoreInfoClick,
+    selectedItem,
+    setSelectedItem,
+    handlerInfoItemClick
   } = useContext(AppContext);
-
-  const [selectedItem, setSelectedItem] = useState(null);
 
   return (
     <React.Fragment>
@@ -45,7 +46,10 @@ const Card = () => {
                       <Link
                         to="/productInfo"
                         className="add-to-cart-btn"
-                        onClick={() => handleMoreInfoClick(item)}
+                        onClick={() => {
+                          setSelectedItem(selectedItem.push(item));
+                          handlerInfoItemClick(item);
+                        }}
                       >
                         Більше про товар
                       </Link>
@@ -78,7 +82,10 @@ const Card = () => {
                       <Link
                         to="/productInfo"
                         className="add-to-cart-btn"
-                        onClick={() => handleMoreInfoClick(item)}
+                        onClick={() => {
+                          setSelectedItem(selectedItem.push(item));
+                          handlerInfoItemClick(item);
+                        }}
                       >
                         Більше про товар
                       </Link>

@@ -14,16 +14,7 @@ const Besket = () => {
     setOrders,
   } = useContext(AppContext);
 
-  // useEffect(() => {
-  //   const savedOrders = localStorage.getItem("orders");
-  //   if (savedOrders) {
-  //     setOrders(JSON.parse(savedOrders));
-  //   }
-  // }, [setOrders]);
-
-  // useEffect(() => {
-  //   localStorage.setItem("orders", JSON.stringify(orders));
-  // }, [orders]);
+ 
 
   return (
     <div className="beskett">

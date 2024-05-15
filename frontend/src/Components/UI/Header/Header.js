@@ -1,5 +1,6 @@
 import React from "react";
 import "./Header.css";
+import imagess from "../../../img/858x286-1140x380.jpg";
 
 const Header = () => {
   return (
@@ -20,23 +21,11 @@ const Header = () => {
         </ol>
         <div className="carousel-inner">
           <div className="carousel-item">
-            <img
-              src={
-                "https://www.ctrs.com.ua/_next/image/?url=https://i.citrus.world/uploads/promo/ExchangePage/header-banner.jpg&w=1920&q=70"
-              }
-              className="d-block w-100"
-              alt="..."
-            />
+            <img src={imagess} className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block"></div>
           </div>
           <div className="carousel-item active">
-            <img
-              src={
-                "https://sawwa-mobile.com.ua/images/user/images/slider/baner-summer-ua1.png"
-              }
-              className="d-block w-100"
-              alt="..."
-            />
+            <img src={imagess} className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block"></div>
           </div>
         </div>

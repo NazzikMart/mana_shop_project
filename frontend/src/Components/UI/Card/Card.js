@@ -42,17 +42,6 @@ const Card = (props) => {
                       >
                         Додати до кошика
                       </button>
-
-                      <Link
-                        to="/productInfo"
-                        className="add-to-cart-btn"
-                        onClick={() => {
-                          setSelectedItem(selectedItem.push(item));
-                          handlerInfoItemClick(item);
-                        }}
-                      >
-                        Більше про товар
-                      </Link>
                     </div>
                   </div>
                 </div>
@@ -78,17 +67,6 @@ const Card = (props) => {
                       >
                         Додати до кошика
                       </button>
-
-                      <Link
-                        to="/productInfo"
-                        className="add-to-cart-btn"
-                        onClick={() => {
-                          setSelectedItem(selectedItem.push(item));
-                          handlerInfoItemClick(item);
-                        }}
-                      >
-                        Більше про товар
-                      </Link>
                     </div>
                   </div>
                 </div>

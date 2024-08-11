@@ -7,7 +7,6 @@ import producer from "../../../json/producer.json";
 import service from "../../../json/service";
 import "../../../index.css";
 import axios from "axios";
-import { Route } from "react-router";
 import Routs from "../../../Routs/Routs.js";
 
 export const AppContext = createContext();

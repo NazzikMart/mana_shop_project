@@ -1,8 +1,19 @@
 import React from "react";
 import "./User.css";
-import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const User = () => {
+  const [hobby, setHobby] = useState("");
+  const [auto, setAuto] = useState("");
+
+  function addHobby() {
+    let hoby = prompt("Яке ваще хобі?");
+    setHobby(hoby);
+  }
+  function addAuto() {
+    let avto = prompt("Напишіть марку вашого авто ");
+    setAuto(avto);
+  }
   return (
     <div className="user-wrapper">
       <div className="user-left-menu">
@@ -61,6 +72,26 @@ const User = () => {
               nazzikmart@gmail.com
             </span>
           </div>
+          {hobby ? (
+            <div className="user-information-info-items__email user-information-info-items__item">
+              <span className="user-information-info-item__email-name">
+                Хобі :{" "}
+              </span>
+              <span className="user-information-info-item__email-desc">
+                {hobby}
+              </span>
+            </div>
+          ) : null}
+          {auto ? (
+            <div className="user-information-info-items__email user-information-info-items__item">
+              <span className="user-information-info-item__email-name">
+                Мій автомобіль :{" "}
+              </span>
+              <span className="user-information-info-item__email-desc">
+                {auto}
+              </span>
+            </div>
+          ) : null}
         </div>
         <div className="user-information-details-items">
           <div className="user-information-details-item__hobby">
@@ -69,7 +100,10 @@ const User = () => {
               Вкажіть чим ви цікавитеся і ми будемо пропонувати найкраще та
               найкорисніше саме для вас.
             </span>
-            <button className="user-information-details-item__hobby-btn">
+            <button
+              className="user-information-details-item__hobby-btn"
+              onClick={addHobby}
+            >
               Додати хобі
             </button>
           </div>
@@ -79,7 +113,10 @@ const User = () => {
             <span className="user-information-details-item__car-desc">
               Чи маєте авто?
             </span>
-            <button className="user-information-details-item__car-btn">
+            <button
+              className="user-information-details-item__car-btn"
+              onClick={addAuto}
+            >
               В мене є авто
             </button>
           </div>

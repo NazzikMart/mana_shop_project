@@ -7,6 +7,7 @@ export default function HomeForm() {
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [message, setMessage] = useState("");
+  const [comment , setComment] = useState('')
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -22,7 +23,7 @@ export default function HomeForm() {
   };
   return (
     <div className="home-form">
-      <div className="home-form__title">Стати нашим клієнтом</div>
+      <div className="home-form__title">Залишити коментар</div>
       <div className="home-form__item">
         <form
           className="form-item__inputs"
@@ -35,6 +36,12 @@ export default function HomeForm() {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
+            <input
+            type="text"
+            placeholder="Відгук"
+            value={comment}
+            onChange={(e) => setComment(e.target.value)}
+          />
           <input
             type="number"
             placeholder="Ваш номер телефону"
@@ -42,7 +49,7 @@ export default function HomeForm() {
             onChange={(e) => setPhoneNumber(e.target.value)}
           />
 
-          <button className="form-item__button">Залишити заявку</button>
+          <button className="form-item__button">Залишити коментар</button>
         </form>
         <div className="form-item__message">{message}</div>
       </div>

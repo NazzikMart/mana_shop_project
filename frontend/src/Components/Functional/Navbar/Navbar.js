@@ -50,7 +50,7 @@ const Navbar = () => {
             </h1>
           </div>
           <div className="section-right">
-            <button className="learn-more">Отримати</button>
+            <Link className="learn-more" to='iphonefree'>Отримати</Link>
           </div>
         </div>
       </section>

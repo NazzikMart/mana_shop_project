@@ -17,6 +17,7 @@ import React from "react";
 import DeliveryPage from "../Components/UI/Deliverypage/DeliveryPage .js";
 import HelpPage from "../Components/UI/HelpPage/HelpPage .js";
 import CreditPage from "../Components/UI/CreditPage/CreditPage .js";
+import IphoneFree from "../Components/IphoneFree/IphoneFree.js";
 
 export default function Routs() {
   const { userData } = useContext(AppContext);
@@ -39,6 +40,7 @@ export default function Routs() {
         <Route path="/shops" element={<ShopsPage/>}/>
         <Route path="/help" element={<HelpPage/>}/>
         <Route path="/credit" element={<CreditPage/>}/>
+        <Route path="/iphonefree" element={<IphoneFree/>}/>
       </Routes>
     </div>
   );

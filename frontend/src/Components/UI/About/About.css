@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .about-title {
   width: 100%;
   text-align: center;
@@ -34,54 +35,71 @@
   font-size: 25px;
   border-bottom: 3px solid black;
 }
-.card-contact__about{
-    display: flex;
-    flex-direction: row;
-    gap: 70px;
-    justify-content: space-around;
-    width: 100%;
+
+.card-contact__about {
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+  justify-content: space-around;
+  width: 100%;
 }
 
-.info-about__title{
-    width: 100%;
-    text-align: center;
-    margin-top: 150px;
-    text-transform: uppercase;
-    font-size: 35px;
-    margin-bottom: 60px;
+.info-about__title {
+  width: 100%;
+  text-align: center;
+  margin-top: 150px;
+  text-transform: uppercase;
+  font-size: 35px;
+  margin-bottom: 60px;
 }
-.info-about__card{
-    display: flex;
-    flex-direction: row;
-    gap: 100px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+
+.info-about__card {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
-.info-about__card div{
-    width: 250px;
-    height: 250px;
-    padding: 30px;
-    background-color: rgb(230, 230, 230);
-    text-align: center;
-    display: flex;
+
+.info-about__card div {
+  width: 250px;
+  height: 250px;
+  padding: 30px;
+  background-color: rgb(230, 230, 230);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  color: black;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 10px;
+  transition: all .4s ease;
+  cursor: pointer;
+}
+
+.bi-shop {
+  font-size: 40px;
+  color: orangered;
+}
+
+.info-about__card div:hover {
+  transform: scale(1.1);
+}
+
+
+@media (max-width : 1020px) {
+  .card-contact__about {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    color: black;
-    font-weight: 700;
-    text-transform: uppercase;
-    border-radius: 10px;
-    transition: all .4s ease;
-    cursor: pointer;
-}
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
 
-.bi-shop{
-    font-size: 40px;
-    color: orangered;
+  .contact-about__title {
+    padding: 20px;
+  }
 }
-.info-about__card div:hover{
-    transform: scale(1.1);
-}
-
